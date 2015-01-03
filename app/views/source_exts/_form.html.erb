@@ -1,0 +1,25 @@
+<%= form_for(@source_ext) do |f| %>
+  <% if @source_ext.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@source_ext.errors.count, "error") %> prohibited this source_ext from being saved:</h2>
+
+      <ul>
+      <% @source_ext.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :source_ext %><br>
+    <%= f.text_field :source_ext %>
+  </div>
+  <div class="field">
+    <%= f.label :source_ext_id_pk %><br>
+    <%= f.number_field :source_ext_id_pk %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Source Exts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source ext</th>
+      <th>Source ext id pk</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @source_exts.each do |source_ext| %>
+      <tr>
+        <td><%= source_ext.source_ext %></td>
+        <td><%= source_ext.source_ext_id_pk %></td>
+        <td><%= link_to 'Show', source_ext %></td>
+        <td><%= link_to 'Edit', edit_source_ext_path(source_ext) %></td>
+        <td><%= link_to 'Destroy', source_ext, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Source ext', new_source_ext_path %>
